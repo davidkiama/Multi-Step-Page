@@ -1,0 +1,42 @@
+.steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.step {
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+  height: 2.8rem;
+  width: 2.8rem;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
+
+  position: relative;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  height: 2px;
+  width: 8rem;
+  background: var(--color-red);
+  z-index: -1;
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+
+.step--active {
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+}
+
+.step--active:not(:last-child)::after {
+  background: var(--color-green);
+}
