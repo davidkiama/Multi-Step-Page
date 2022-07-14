@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import ProgressBar from "./ProgressBar";
+import BoxPageSlide from "./BoxPageSlide";
 
 import "./BoxPage.css";
 
@@ -21,48 +22,31 @@ function BoxPage() {
       <h2 className="box__heading">Multi Step Process </h2>
 
       <div className="box__main">
-        <div
-          className={`
-        ${currPage === 1 ? "active" : ""} 
-        ${currPage > 1 ? "prev" : ""} box__page`}
-        >
+        <BoxPageSlide currPage={currPage} pageNumber={1}>
           Page 1
-        </div>
-        <div
-          className={`
-      ${currPage === 2 ? "active" : ""}
-      ${currPage > 2 ? "prev" : ""} box__page`}
-        >
+          <br />
+          Content goes here...
+        </BoxPageSlide>
+
+        <BoxPageSlide currPage={currPage} pageNumber={2}>
           Page 2
-        </div>
+        </BoxPageSlide>
 
-        <div
-          className={`
-      ${currPage === 3 ? "active" : ""}  
-      ${currPage > 3 ? "prev" : ""}   box__page`}
-        >
+        <BoxPageSlide currPage={currPage} pageNumber={3}>
           Page 3
-        </div>
+        </BoxPageSlide>
 
-        <div
-          className={`${currPage === 4 ? "active" : ""}  
-        ${currPage > 4 ? "prev" : ""}  box__page`}
-        >
+        <BoxPageSlide currPage={currPage} pageNumber={4}>
           Page 4
-        </div>
-        <div
-          className={`${currPage === 5 ? "active" : ""}  
-        ${currPage > 5 ? "prev" : ""}  box__page`}
-        >
+        </BoxPageSlide>
+
+        <BoxPageSlide currPage={currPage} pageNumber={5}>
           Page 5
-        </div>
-        <div
-          className={`
-      ${currPage === 6 ? "active" : ""}  
-      ${currPage > 6 ? "prev" : ""}  box__page`}
-        >
+        </BoxPageSlide>
+
+        <BoxPageSlide currPage={currPage} pageNumber={6}>
           Page 6
-        </div>
+        </BoxPageSlide>
       </div>
 
       <div className="box__footer">
